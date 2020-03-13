@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="CombineMVVM" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRZ-wU-g0Z">
+                    <rect key="frame" x="20" y="817" width="374" height="45"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="uhK-XX-iv1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="Login"/>
+                    <state key="disabled">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yc0-Oy-E9h">
+                    <rect key="frame" x="132" y="253.5" width="150" height="149"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="YFT-Gi-ARj"/>
+                        <constraint firstAttribute="height" constant="150" id="uAZ-BT-nEb"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdp-m7-roS">
+                    <rect key="frame" x="20" y="423" width="374" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ec9-dK-zhp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="about ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkj-NY-Uyj">
+                    <rect key="frame" x="20" y="473" width="374" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="MJV-r0-Tou"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZv-Zx-2o7">
+                    <rect key="frame" x="20" y="762" width="374" height="45"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Bkb-QA-Cf5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="Go Home"/>
+                    <state key="disabled">
+                        <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lkj-NY-Uyj" secondAttribute="trailing" constant="20" id="00m-KA-PtM"/>
+                <constraint firstItem="KRZ-wU-g0Z" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="0.20000000000000001" id="1KE-Xq-GZt"/>
+                <constraint firstItem="hdp-m7-roS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="6bD-hF-iKq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KRZ-wU-g0Z" secondAttribute="trailing" constant="20" id="7aR-CH-fXw"/>
+                <constraint firstItem="KRZ-wU-g0Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Ahj-Ud-oQQ"/>
+                <constraint firstItem="lkj-NY-Uyj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Bmd-R7-X52"/>
+                <constraint firstItem="yc0-Oy-E9h" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="UGe-3n-LhK"/>
+                <constraint firstItem="hdp-m7-roS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UlA-Zh-M4o"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qZv-Zx-2o7" secondAttribute="trailing" constant="20" id="XNd-Ne-IaI"/>
+                <constraint firstItem="qZv-Zx-2o7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="djB-Wi-Hw3"/>
+                <constraint firstItem="KRZ-wU-g0Z" firstAttribute="top" secondItem="qZv-Zx-2o7" secondAttribute="bottom" constant="10" id="pCS-1y-TYl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hdp-m7-roS" secondAttribute="trailing" constant="20" id="qRa-cz-Spp"/>
+                <constraint firstItem="hdp-m7-roS" firstAttribute="top" secondItem="yc0-Oy-E9h" secondAttribute="bottom" constant="20" id="rGd-Jc-KU1"/>
+                <constraint firstItem="lkj-NY-Uyj" firstAttribute="top" secondItem="hdp-m7-roS" secondAttribute="bottom" id="tgK-1A-Ytj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person.crop.circle" catalog="system" width="64" height="60"/>
+    </resources>
+</document>
