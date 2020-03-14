@@ -9,6 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="CombineMVVM" customModuleProvider="target">
             <connections>
+                <outlet property="aboutLabel" destination="lkj-NY-Uyj" id="R5p-bj-zPQ"/>
+                <outlet property="homeButton" destination="qZv-Zx-2o7" id="fLL-yO-3k0"/>
+                <outlet property="loginButton" destination="KRZ-wU-g0Z" id="1VD-lq-Ymd"/>
+                <outlet property="nameLabel" destination="hdp-m7-roS" id="EDJ-sY-abM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,6 +32,9 @@
                     <state key="disabled">
                         <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </state>
+                    <connections>
+                        <action selector="loginButtonTourchUpInside:" destination="-1" eventType="touchUpInside" id="mTe-17-3xg"/>
+                    </connections>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yc0-Oy-E9h">
                     <rect key="frame" x="132" y="253.5" width="150" height="149"/>
@@ -66,6 +73,9 @@
                     <state key="disabled">
                         <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     </state>
+                    <connections>
+                        <action selector="homeButtonTourchUpInside:" destination="-1" eventType="touchUpInside" id="b4R-Oi-ZOu"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
