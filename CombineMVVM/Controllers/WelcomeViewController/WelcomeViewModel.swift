@@ -64,7 +64,7 @@ final class WelcomeViewModel {
   private func processState(_ state: State) {
     switch state {
     case .initial:
-      name.value = user.name
+      name.value = user.username
       about.value = user.about
       loginEnabled.value = user.isLogin
       errorText.value = nil

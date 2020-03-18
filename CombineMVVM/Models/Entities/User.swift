@@ -8,8 +8,14 @@
 
 import Foundation
 
-struct User {
-  var name: String
-  var about: String
-  var isLogin: Bool
+final class User {
+  var username: String
+  var password: String
+  var isLogin = false
+  var about = "n/a"
+  
+  init(username: String, password: String) {
+    self.username = username
+    self.password = password
+  }
 }

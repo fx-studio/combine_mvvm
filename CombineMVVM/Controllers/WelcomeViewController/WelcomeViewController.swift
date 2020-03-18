@@ -18,7 +18,7 @@ class WelcomeViewController: UIViewController {
   @IBOutlet weak var loginButton: UIButton!
   
   //MARK: Properties
-  let viewModel = WelcomeViewModel(user: .init(name: "Fx", about: "Admin", isLogin: false))
+  let viewModel = WelcomeViewModel(user: .init(username: "FX", password: "123456"))
   
   var subscriptions = Set<AnyCancellable>()
   
