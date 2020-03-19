@@ -49,6 +49,8 @@ final class LoginViewModel {
   // Subscriptions
   var subscriptions = [AnyCancellable]()
   
+  
+  //MARK: init
   init(username: String, password: String) {
     
     self.user = .init(username: username, password: password)
@@ -71,6 +73,30 @@ final class LoginViewModel {
 //      .store(in: &subscriptions)
   }
   
+  
+  //MARK: Actions
+  // without callback
+  func clear() {
+    username = ""
+    password = ""
+  }
+  
+  // with callback
+  func login() -> AnyPublisher<Bool, Never> {
+    
+    if isLoading {
+      return $isLoading.map { !$0 }.eraseToAnyPublisher()
+    }
+    
+    isLoading = true
+    
+    // test
+    let test = username == "fxstudio" && password == "123456"
+    
+    let subject = CurrentValueSubject<Bool, Never>(test)
+    return subject.delay(for: .seconds(1), scheduler: DispatchQueue.main).eraseToAnyPublisher()
+  }
+  
   //MARK: - Private functions
   // process Action
   private func processAction(_ action: Action) {
@@ -78,11 +104,20 @@ final class LoginViewModel {
     switch action {
     case .login:
       print("ViewModel -> Login")
-      self.state.value = .logined
+    
+      _ = login().sink { done in
+        self.isLoading = false
+        
+        if done {
+          self.state.value = .logined
+        } else {
+          self.state.value = .error(message: "Login failed.")
+        }
+      }
       
     case .clear:
-      username = ""
-      password = ""
+      self.clear()
+      
     }
   }
   

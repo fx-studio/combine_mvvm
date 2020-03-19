@@ -108,11 +108,27 @@ class LoginViewController: BaseViewController {
   
   //MARK: - Actions
   @IBAction func loginButtonTouchUpInside(_ sender: Any) {
+    
+//    viewModel.login()
+//      .sink { [weak self] done in
+//
+//        self!.viewModel.isLoading = false
+//
+//        if done {
+//          let vc = HomeViewController()
+//          self?.navigationController?.pushViewController(vc, animated: true)
+//
+//        } else {
+//          self?.alert(title: App.Text.appName, text: "Login failed.")
+//        }
+//      }
+//      .store(in: &subscriptions)
+    
     viewModel.action.send(.login)
   }
   
   @objc func clear() {
-
+    viewModel.action.send(.clear)
   }
   
 }
